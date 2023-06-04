@@ -1,0 +1,14 @@
+body {background-color: lightskyblue;}
+
+.btn {
+    color: white;
+}
+#bgc {
+    background-color: #3F51B5 !important;
+    color: white;
+}
+
+#bgc:hover{
+    color: rgba(255,255,255,0.5);
+    border-bottom-color:rgba(255,255,255,0.5);
+}
