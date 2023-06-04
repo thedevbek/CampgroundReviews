@@ -6,7 +6,7 @@ const { cloudinary } = require("../cloudinary");
 
 
 module.exports.index = async (req, res) => {
-    const campgrounds = await Campground.find({}).populate('popupText');
+    const campgrounds = await Campground.find({});
     res.render('campgrounds/index', { campgrounds })
 }
 
@@ -14,7 +14,7 @@ module.exports.renderNewForm = (req, res) => {
     res.render('campgrounds/new');
 }
 
-module.exports.createCampground = async (req, res) => { //removed next
+module.exports.createCampground = async (req, res, next) => {
     const geoData = await geocoder.forwardGeocode({
         query: req.body.campground.location,
         limit: 1

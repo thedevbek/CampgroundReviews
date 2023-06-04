@@ -18,7 +18,8 @@ map.on('load', function () {
         data: campgrounds,
         cluster: true,
         clusterMaxZoom: 14,
-        clusterRadius: 50
+        clusterRadius: 50,
+
     });
 
     map.addLayer({
@@ -44,7 +45,8 @@ map.on('load', function () {
                 30,
                 750,
                 40
-            ]
+            ],
+
         }
     });
 
@@ -57,7 +59,8 @@ map.on('load', function () {
             'text-field': '{point_count_abbreviated}',
             'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
             'text-size': 12
-        }
+        },
+
     });
 
     map.addLayer({
@@ -70,12 +73,14 @@ map.on('load', function () {
             'circle-radius': 5,
             'circle-stroke-width': 1,
             'circle-stroke-color': '#fff'
-        }
+        },
+
     });
 
     map.on('click', 'clusters', function (e) {
         const features = map.queryRenderedFeatures(e.point, {
-            layers: ['clusters']
+            layers: ['clusters'],
+
         });
         const clusterId = features[0].properties.cluster_id;
         map.getSource('campgrounds').getClusterExpansionZoom(
@@ -85,7 +90,7 @@ map.on('load', function () {
 
                 map.easeTo({
                     center: features[0].geometry.coordinates,
-                    zoom: zoom
+                    zoom: zoom,
                 });
             }
         );
