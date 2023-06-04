@@ -8,8 +8,8 @@
         <div class="row">
             <div class="col-md-4">
                 <% if(campground.images.length) { %>
-                <img class="img-fluid" alt="" src="<%= campground.images[0].url %>" crossorigin>
-                <% }else { %>
+                <img class="img-fluid" alt="" src="<%=campground.images[0].url%>">
+                <% }else {%>
                     <img class="img-fluid" alt=""
                          src="https://res.cloudinary.com/dt10pzfkm/image/upload/v1685544499/campgroundReviews/gfdrfcsx2ilcq8embmov.jpg"
                          crossorigin>
@@ -18,7 +18,7 @@
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"><%= campground.title %> </h5>
-                    <p class="card-text"><%= campground.description %></p>
+<!--                    <p class="card-text"><%= campground.description %></p>-->
                     <p class="card-text">
                         <small class="text-muted"><%= campground.location %></small>
                     </p>
@@ -37,4 +37,4 @@
     }
 </script>
 
-<script  src="/public/javascripts/clusterMap.js"></script>
+<script  src="/javascripts/clusterMap.js"></script>

@@ -12,3 +12,22 @@ body {background-color: lightskyblue;}
     color: rgba(255,255,255,0.5);
     border-bottom-color:rgba(255,255,255,0.5);
 }
+
+.card {
+    background-color: lightskyblue;
+    border: solid darkblue 1px;
+}
+
+h1 {
+    color: darkblue;
+}
+
+.list-group-item {
+    background-color: lightskyblue;
+    border: solid darkblue 1px;
+}
+
+.rev {
+    background-color: lightskyblue;
+    border: solid darkblue 1px;
+}
