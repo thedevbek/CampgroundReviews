@@ -26,13 +26,10 @@ body {
 
 .nav-link.active {
     color: rgba(255,255,255,0.5);
-    /*border-bottom-color:white;*/
-
 }
 
 .btn-secondary, .btn-secondary:hover {
     color: #3F51B5;
-    /*text-shadow: none;*/
 }
 
 p {

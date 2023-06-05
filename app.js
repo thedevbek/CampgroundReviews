@@ -25,9 +25,7 @@ const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/campgroundReviews
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
-    // useCreateIndex: true,
     useUnifiedTopology: true,
-    // useFindAndModify: false
 });
 
 const db = mongoose.connection;
@@ -116,7 +114,7 @@ app.use(
                 "'self'",
                 "blob:",
                 "data:",
-                "https://res.cloudinary.com/dt10pzfkm/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT!
+                "https://res.cloudinary.com/dt10pzfkm/",
                 "https://images.unsplash.com/",
             ],
             fontSrc: ["'self'", ...fontSrcUrls],
