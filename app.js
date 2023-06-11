@@ -24,8 +24,8 @@ const MongoStore = require('connect-mongo');
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/campgroundReviews'
 
 mongoose.connect(dbUrl, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
 });
 
 const db = mongoose.connection;
@@ -157,6 +157,7 @@ app.use((err, req, res, next) => {
     if (!err.message) err.message = 'Well, Shit Far!!'
     res.status(statusCode).render('error', { err })
 })
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
